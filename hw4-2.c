@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){ 
-    int ac,pa,n;
+    int ac,pa,n,x;
     int a[6][3]=
     {
         {123,456,9000},
@@ -13,16 +13,18 @@ int main(){
     scanf("%d",&n);
     for(int b=0;b<n;b++)
     {
+        x=0;
     scanf("%d %d",&ac,&pa);
       for(int c=0;c<6;c++){ 
        if(ac==a[c][0]&&pa==a[c][1])
        {
-        printf("%d", a[c][2]);
-        break;
+        printf("%d\n", a[c][2]);
+         x=1;
        }
-        else{ printf("error");
-       }
-       break;
+      
+      }
+     if (x==0){
+      printf("error\n");
     }
-}
+    }
 }
